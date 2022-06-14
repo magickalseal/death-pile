@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/ground/ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/ground_with_spikes/ground_with_spikes.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/spawn_altar/spawn_altar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/level-1/level-1.gd" type="Script" id=4]
+[ext_resource path="res://objects/door/door.tscn" type="PackedScene" id=5]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="RespawnMarkFalling" type="Node2D" parent="."]
+position = Vector2( 0, 700 )
+
+[node name="Ground1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 133, 522 )
+
+[node name="Ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 761, 522 )
+
+[node name="SpawnAltar" parent="." instance=ExtResource( 3 )]
+position = Vector2( 138, 451 )
+
+[node name="GroundWithSpikes1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 343, 546 )
+
+[node name="GroundWithSpikes2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 551, 546 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 816, 471 )
